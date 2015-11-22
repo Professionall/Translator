@@ -1,0 +1,81 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Translate
+{
+    public static void main(String[] args) throws IOException, InterruptedException
+    {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        Map<String, String> word = new HashMap<String, String>();
+
+        System.out.println("Welcome to the dictionary!");
+        System.out.println("Wait. Loading menu...");
+        Thread.sleep(2000);
+        System.out.println("Word (exit), will close the program.");
+        Thread.sleep(500);
+        System.out.println("(TRANSLATOR HAS LIMITED vocabulary)");
+        Thread.sleep(500);
+        System.out.println("If you were seeing word (null), it means that you have entered the word wrong");
+        Thread.sleep(500);
+        System.out.println("Input words");
+
+        word.put("Hate", "Ненавижу");
+        word.put("Hi","Привет");
+        word.put("Impair","Ухудшать");
+        word.put("Fury","Ярость");
+        word.put("Important","Важный");
+        word.put("Dangerous","Опастность");
+        word.put("Goal","Цель");
+        word.put("Knife","Нож");
+        word.put("Team","Команда");
+        word.put("Major","Главный");
+        word.put("Agree","Согласие");
+        word.put("Sweat","Сладкий");
+        word.put("Future","Будущее");
+        word.put("Incredible","Невероятный");
+        word.put("Input","Ввод");
+        word.put("Output","Вывод");
+        word.put("Enough","Достаточно");
+        word.put("Suspect","Подозреваемый");
+        word.put("Survivor","Выжевший");
+        word.put("Abandon","Покинуть");
+
+        word.put("Ненавижу", "Hate");
+        word.put("Привет","Hi");
+        word.put("Ухудшать","Impair");
+        word.put("Ярость","Fury");
+        word.put("Важный","Important");
+        word.put("Опастность","Dangerous");
+        word.put("Цель","Goal");
+        word.put("Нож","Knife");
+        word.put("Команда","Team");
+        word.put("Главный","Major");
+        word.put("Согласие","Agree");
+        word.put("Сладкий","Sweat");
+        word.put("Будущее","Future");
+        word.put("Невероятный","Incredible");
+        word.put("Ввод","Input");
+        word.put("Вывод","Output");
+        word.put("Достаточно","Enough");
+        word.put("Подозреваемый","Suspect");
+        word.put("Выжевший","Survivor");
+        word.put("Покинуть","Abandon");
+
+
+        while (true)
+        {
+                    String tar = reader.readLine();
+                    if (tar.equals("exit"))
+                        break;
+
+                    for (String s : tar.split(" "))
+                    {
+                        System.out.println(word.get(s));
+                    }
+        }
+    }
+}
