@@ -68,14 +68,24 @@ public class Translate
 
         while (true)
         {
-                    String tar = reader.readLine();
-                    if (tar.equals("exit"))
-                        break;
+            String tar = reader.readLine();
+            if (tar.equals("exit"))
+            {
+                break;
+            }
 
-                    for (String s : tar.split(" "))
-                    {
-                        System.out.println(word.get(s));
-                    }
+            for (String s : tar.split(" "))
+            {
+                String w = word.get(s);
+                if (w == null)
+                {
+                    System.out.println("You have entered wrong word! Try again.");
+                }
+                else
+                {
+                    System.out.println(word.get(s));
+                }
+            }
         }
     }
 }
